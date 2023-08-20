@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import SuperQuilty from "./SuperQuilty";
+import SuperQuilty from "./SuperQuality";
 import CustomerReviews from "./CustomerReviews";
 import Footer from "./Footer";
 import PopularProducts from "./PopularProducts";

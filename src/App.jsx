@@ -1,14 +1,14 @@
 import {
   CustomerReviews,
   PopularProducts,
-  SuperQuality,
   Service,
   SpecialOffers,
   Footer,
   Hero,
-  Subscribe
+  Subscribe,
 } from './sections';
 import Nav from './components/Nav';
+import SuperQuality from './sections/SuperQuality';
 
 
 const App = () => (

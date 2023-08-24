@@ -3,6 +3,9 @@ import { hamburger } from '../assets/icons';
 import { navLinks } from '../constants';
 
 const Nav = () => {
+
+  
+
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
       <nav className="flex justify-between items-center max-container">
@@ -22,7 +25,7 @@ const Nav = () => {
           ))}
         </ul>
         <div className='hidden max-lg:block'>
-            <img src={hamburger} alt='hamburgerMenu' width={25} height={25} />
+            <img src={hamburger} alt='hamburgerMenu' width={25} height={25} onClick={hamburger}/>
         </div>
       </nav>
     </header>

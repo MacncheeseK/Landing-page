@@ -9,11 +9,31 @@ import {
 } from './sections';
 import Nav from './components/Nav';
 import SuperQuality from './sections/SuperQuality';
+import Hamburger from './components/Hamburger';
+import{useState} from 'react';
+import { navLinks } from './constants';
 
 
-const App = () => (
+const App = () => {
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
+  const toggleHamburgerMenu = () => {
+    setHamburgerMenu((prev) => !prev);
+  };
+return (
   <main className="relative">
-    <Nav />
+    <Nav toggleHamburgerMenu={toggleHamburgerMenu} />
+    <section className=" hidden max-lg:block max-lg:pt-16">
+      {hamburgerMenu && (
+        <div className="">
+          <ul className=" flex items-center gap-5 flex-col bg-white p-3 shadow-lg rounded-md w-full  ">
+            {navLinks.map((item) => (
+              <Hamburger href={item.href} label={item.label} />
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
+
     <section className="x1:padding-l wide:padding-r padding-b">
       <Hero />
     </section>
@@ -39,5 +59,5 @@ const App = () => (
       <Footer />
     </section>
   </main>
-);
+);};
 export default App;

@@ -1,13 +1,9 @@
 import { headerLogo } from '../assets/images';
 import { hamburger } from '../assets/icons';
 import { navLinks } from '../constants';
-import { useState } from 'react';
-import Hamburger from './Hamburger';
-const Nav = () => {
-  const [hamburgerMenu, setHamburgerMenu] = useState(false)
-  const toggleHamburgerMenu = () => {
-    setHamburgerMenu((prev)=> !prev); 
-  }
+
+const Nav = (props) => {
+
 
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
@@ -33,18 +29,10 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden max-lg:block relative">
-          <button onClick={toggleHamburgerMenu}>
+        <div className="hidden max-lg:block ">
+          <button onClick={props.toggleHamburgerMenu}>
             <img src={hamburger} alt="hamburgerMenu" width={25} height={25} />
           </button>
-          {hamburgerMenu && <div>
-            <ul className=" flex items-center gap-5 flex-col absolute right-0 bg-white p-3 shadow-lg rounded-md">
-              {
-                navLinks.map((item) => (
-                  <Hamburger href={item.href} label={item.label} />
-                ))}
-            </ul>
-          </div>}
         </div>
       </nav>
     </header>

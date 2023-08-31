@@ -37,13 +37,14 @@ const Nav = () => {
           <button onClick={toggleHamburgerMenu}>
             <img src={hamburger} alt="hamburgerMenu" width={25} height={25} />
           </button>
-          
-          <ul className=" flex items-center gap-5 flex-col absolute right-0 bg-white p-3 shadow-lg rounded-md">
-            {hamburgerMenu &&
-              navLinks.map((item) => (
-                <Hamburger href={item.href} label={item.label} />
-              ))}
-          </ul>
+          {hamburgerMenu && <div>
+            <ul className=" flex items-center gap-5 flex-col absolute right-0 bg-white p-3 shadow-lg rounded-md">
+              {
+                navLinks.map((item) => (
+                  <Hamburger href={item.href} label={item.label} />
+                ))}
+            </ul>
+          </div>}
         </div>
       </nav>
     </header>

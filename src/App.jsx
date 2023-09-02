@@ -24,7 +24,7 @@ const App = () => {
 
       <HamburgerMenu hamburgerMenu={hamburgerMenu} />
 
-      <section className="x1:padding-l wide:padding-r padding-b">
+      <section className="x1:padding-l wide:padding-r padding-b mt-28">
         <Hero />
       </section>
       <section className=" padding">
